@@ -80,19 +80,26 @@ The dataset is generated programmatically via:
 
 src/generate_data.py
 
-### ⚙ Feature Engineering
+## ⚙️ Feature Engineering
 
-Engineered features include:
+To improve predictive performance and interpretability, several behavioral and temporal features were engineered:
 
-- Revenue Lifetime = tenure × monthly charges
+- **Revenue Lifetime** = tenure × monthly charges  
+  Captures cumulative customer value over time.
 
-- Engagement Score = weighted combination of usage and sessions
+- **Engagement Score** = weighted combination of usage minutes and session frequency  
+  Quantifies overall product interaction intensity.
 
-- Usage trend ratio to capture decline patterns
+- **Usage Trend Ratio**  
+  Identifies declining engagement patterns that often precede churn.
 
-- Risk signals derived from customer behavior
+- **Support Ticket Frequency (90-day window)**  
+  Acts as a proxy for customer friction and dissatisfaction.
 
-Feature engineering enhances predictive signal strength and model interpretability.
+- **Behavioral Risk Signals**  
+  Derived from combinations of low tenure, declining usage, and high support activity.
+
+These engineered features strengthen model signal quality while preserving business interpretability, enabling both accurate churn prediction and explainable insights.
 
 ## 🤖 Modeling Approach
 
@@ -230,7 +237,7 @@ notebooks/
 
 It provides a complete step-by-step narrative of the project.
 
-##🧠 Skills Demonstrated
+## 🧠 Skills Demonstrated
 
 - Behavioral feature engineering
 
