@@ -3,7 +3,7 @@
 End-to-end churn prediction system built using behavioral and temporal subscription data.
 This project demonstrates a full machine learning workflow — from data generation and feature engineering to model evaluation, explainability, and BI-ready deployment artifacts.
 
-# 📌 Problem Statement
+## 📌 Problem Statement
 
 Customer churn directly impacts recurring revenue in subscription-based businesses.
 The objective of this project is to:
@@ -18,7 +18,7 @@ The objective of this project is to:
 
 - Export predictions for BI dashboarding
 
-# 🧱 Project Architecture
+## 🧱 Project Architecture
 
 ```bash
 Churn_Prediction_Explainability/
@@ -50,11 +50,11 @@ Churn_Prediction_Explainability/
 
 This structure mirrors a production-style ML project layout.
 
-# 📊 Dataset Overview
+## 📊 Dataset Overview
 
 Synthetic subscription dataset (5,000 customers) including behavioral and temporal signals.
 
-## Behavioral Features
+### Behavioral Features
 
 - usage_minutes_last_30d
 
@@ -64,7 +64,7 @@ Synthetic subscription dataset (5,000 customers) including behavioral and tempor
 
 - usage_trend_ratio
 
-## Temporal Features
+### Temporal Features
 
 - tenure_months
 
@@ -72,7 +72,7 @@ Synthetic subscription dataset (5,000 customers) including behavioral and tempor
 
 - engagement_score
 
-## Target Variable
+### Target Variable
 
 - churn (1 = churned, 0 = retained)
 
@@ -80,7 +80,7 @@ The dataset is generated programmatically via:
 
 src/generate_data.py
 
-## ⚙ Feature Engineering
+### ⚙ Feature Engineering
 
 Engineered features include:
 
@@ -94,9 +94,9 @@ Engineered features include:
 
 Feature engineering enhances predictive signal strength and model interpretability.
 
-# 🤖 Modeling Approach
+## 🤖 Modeling Approach
 
-## Logistic Regression (Baseline Model)
+### Logistic Regression (Baseline Model)
 
 - Interpretable probabilistic classifier
 
@@ -104,7 +104,7 @@ Feature engineering enhances predictive signal strength and model interpretabili
 
 - Suitable for risk ranking and segmentation
 
-# 📈 Model Evaluation
+## 📈 Model Evaluation
 
 Evaluation performed using:
 
@@ -118,13 +118,13 @@ Evaluation performed using:
 
 Generated artifacts:
 
-- reports/roc_curve.png
+![ROC Curve](reports/roc_curve.png)
 
-- reports/confusion_matrix.png
+![Confusion Matrix](reports/confusion_matrix.png)
 
 ROC-AUC measures model discrimination ability between churn and non-churn.
 
-# 🔎 Model Explainability
+## 🔎 Model Explainability
 
 Explainability implemented using SHAP.
 
@@ -146,7 +146,7 @@ This allows business teams to understand:
 
 - Which behaviors indicate retention
 
-# 📊 Power BI Integration
+## 📊 Power BI Integration
 
 The project exports:
 ```bash
@@ -173,21 +173,21 @@ You can build dashboards showing:
 
 This bridges machine learning with business reporting.
 
-# 🚀 How to Run
+## 🚀 How to Run
 
-## 1️⃣ Install Dependencies
+### 1️⃣ Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## 2️⃣ Generate Dataset
+### 2️⃣ Generate Dataset
 
 ```bash
 python src/generate_data.py
 ```
 
-## 3️⃣ Train Model & Generate Artifacts
+### 3️⃣ Train Model & Generate Artifacts
 
 ```bash
 python src/train.py
@@ -205,7 +205,7 @@ This will:
 
 - Export Power BI dataset
 
-# 📓 Notebook Walkthrough
+## 📓 Notebook Walkthrough
 
 Open:
 ```bash
@@ -230,7 +230,7 @@ notebooks/
 
 It provides a complete step-by-step narrative of the project.
 
-# 🧠 Skills Demonstrated
+##🧠 Skills Demonstrated
 
 - Behavioral feature engineering
 
@@ -248,7 +248,7 @@ It provides a complete step-by-step narrative of the project.
 
 - Modular ML project structure
 
-# 🔮 Future Enhancements
+## 🔮 Future Enhancements
 
 - XGBoost implementation
 
@@ -264,7 +264,7 @@ It provides a complete step-by-step narrative of the project.
 
 - Cloud deployment (AWS / Azure)
 
-# 📌 Summary
+## 📌 Summary
 
 This project demonstrates a complete churn analytics workflow — from synthetic subscription data generation to explainable machine learning predictions and BI-ready outputs.
 
